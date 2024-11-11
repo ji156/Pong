@@ -22,16 +22,31 @@ public class Ball : MonoBehaviour
 	}
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.CompareTag("Padlle"))
+		if (collision.gameObject.CompareTag("Paddle"))
         {
             ballRb.velocity *= valocityMultiplier;
 
 		}
 	}
 
-	void Update()
-    {
-       
-        
-    }
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+        if (collision.gameObject.CompareTag("Goal1"))
+        {
+            // Si toca goal1 ejecutamos funcion de paddle2score
+            GameManager.Instance.Paddle2Score();
+            // Reiniciamos las paletas y bola a su posicion inicial
+            GameManager.Instance.Restart();
+            // Lanzamos la bola
+            Launch();
+        }
+        if (collision.gameObject.CompareTag("Goal2"))
+        {
+            GameManager.Instance.Paddle1Score();
+            GameManager.Instance.Restart();
+            Launch();
+        }
+	}
+
+	
 }
