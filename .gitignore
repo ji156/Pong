@@ -1,0 +1,74 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Archivos de Visual Studio
+.vscode/
+*.csproj
+*.sln
+*.user
+*.suo
+*.pidb
+*.unityproj
+*.booproj
+*.svd
+
+# Archivos y carpetas de Unity
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+MemoryCaptures/
+
+# Carpetas y archivos de compilación
+*.stackdump
+*.apk
+*.aab
+*.app
+*.exe
+*.dll
+*.pdb
+*.mdb
+*.ipa
+
+# Archivos de Unity generados automáticamente
+*.pidb
+*.ilk
+*.exp
+*.idb
+*.pdb
+*.opendb
+*.swp
+
+# Archivos de Unity Cloud Build
+[UCB]/ 
+
+# Archivos de configuración de usuario de Unity
+UserSettings/
+*.prefab.unityweb
+*.asset.unityweb
+*.unity3d
+*.asmdef.unityweb
+*.rsp
+
+# Archivos de caché de paquetes
+Library/PackageCache/
+
+# Otros archivos generados
+*.log
+*.diff
+*.patch
+
+# Archivos de metadatos
+.meta
+
+# Carpetas de paquetes y dependencias descargadas
+Packages/manifest.json
+Packages/packages-lock.json
+
+# Archivos de Editor de Unity específicos del usuario
+*.csproj
+*.unityproj
