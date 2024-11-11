@@ -72,3 +72,5 @@ Packages/packages-lock.json
 # Archivos de Editor de Unity específicos del usuario
 *.csproj
 *.unityproj
+
+.vs/
