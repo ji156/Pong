@@ -9,12 +9,13 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private TMP_Text paddle2ScoreText;
 	[SerializeField] private TMP_Text winnerText;
 	[SerializeField] private TMP_Text start;
+	[SerializeField] private TMP_Text restart;
 
 	[SerializeField] private Transform paddle1Transform;  
 	[SerializeField] private Transform paddle2Transform;
 	[SerializeField] private Transform ballTransform;
 
-	[SerializeField] private Ball ballVelocity;
+	private Ball ballVelocity;
 
 	private int paddle1Score;
 	private int paddle2Score;
@@ -81,6 +82,7 @@ public class GameManager : MonoBehaviour
 		else if (ballVelocity.GetComponent<Rigidbody2D>().velocity.magnitude > 0)
 		{
 			winnerText.text = "";
+			restart.gameObject.SetActive(false);
 		}
 	}
 
@@ -93,7 +95,8 @@ public class GameManager : MonoBehaviour
 		paddle2ScoreText.text = paddle2Score.ToString();
 		ballVelocity.initialVelocity = 0;
 
-		// Borra el texto del ganador al finalizar el juego
+		restart.gameObject.SetActive(true); 
+
 	}
 
 
